@@ -52,15 +52,36 @@
                 </ul>
 
                 <h2>Screenshots</h2>
-                <div class="project-images">
-                    <figure>
-                        <img src="https://via.placeholder.com/280x280?text=Screenshot+1" alt="Trip Planner screenshot 1">
-                        <figcaption>Add your app screenshot here</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://via.placeholder.com/280x280?text=Screenshot+2" alt="Trip Planner screenshot 2">
-                        <figcaption>Add your app screenshot here</figcaption>
-                    </figure>
+                <div class="slideshow-container">
+                    <div class="slideshow-slides">
+                        <div class="slideshow-slide active">
+                            <img src="tripplanner%20images/image%20%281%29.png" alt="Trip Planner screenshot 1">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%282%29.png" alt="Trip Planner screenshot 2">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%283%29.png" alt="Trip Planner screenshot 3">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%284%29.png" alt="Trip Planner screenshot 4">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%285%29.png" alt="Trip Planner screenshot 5">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%286%29.png" alt="Trip Planner screenshot 6">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%287%29.png" alt="Trip Planner screenshot 7">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="tripplanner%20images/image%20%288%29.png" alt="Trip Planner screenshot 8">
+                        </div>
+                    </div>
+                    <button class="slideshow-btn slideshow-prev" aria-label="Previous">&#10094;</button>
+                    <button class="slideshow-btn slideshow-next" aria-label="Next">&#10095;</button>
+                    <div class="slideshow-dots"></div>
                 </div>
 
                 <div class="video-demo">
@@ -73,5 +94,42 @@
             </div>
         </div>
     </div>
+
+    <script>
+        (function() {
+            const slides = document.querySelectorAll('.slideshow-slide');
+            const dotsContainer = document.querySelector('.slideshow-dots');
+            const prevBtn = document.querySelector('.slideshow-prev');
+            const nextBtn = document.querySelector('.slideshow-next');
+            let currentIndex = 0;
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.slideshow-dot');
+
+            function goToSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                dots[currentIndex].classList.remove('active');
+                currentIndex = (index + slides.length) % slides.length;
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            let autoplay = setInterval(() => goToSlide(currentIndex + 1), 4000);
+            document.querySelector('.slideshow-container').addEventListener('mouseenter', () => clearInterval(autoplay));
+            document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
+                autoplay = setInterval(() => goToSlide(currentIndex + 1), 4000);
+            });
+        })();
+    </script>
 </body>
 </html>

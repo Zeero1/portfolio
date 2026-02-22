@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rouge Device Detection on Edge Monitoring System - Reynard's Portfolio</title>
+    <title>Trip Planner - Reynard's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .project-header {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('roguedevicesthumbnail.png') center center / cover no-repeat;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 8rem 0 4rem;
             text-align: center;
@@ -60,7 +60,7 @@
             margin-top: 0;
         }
 
-        .device-images {
+        .project-images {
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -73,7 +73,7 @@
             border: 1px solid #e0e0e0;
         }
 
-        .device-images figure {
+        .project-images figure {
             text-align: center;
             margin: 0;
             flex: 0 0 auto;
@@ -83,7 +83,7 @@
             width: 280px;
         }
 
-        .device-images figure img {
+        .project-images figure img {
             width: 280px;
             height: 280px;
             object-fit: contain;
@@ -94,12 +94,12 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .device-images figure:hover img {
+        .project-images figure:hover img {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         }
 
-        .device-images figcaption {
+        .project-images figcaption {
             margin-top: 1.25rem;
             font-size: 1rem;
             color: #2c3e50;
@@ -195,21 +195,18 @@
                 border-radius: 12px;
             }
 
-            .device-images {
+            .project-images {
                 gap: 2rem;
                 padding: 1.5rem;
             }
 
-            .device-images figure {
+            .project-images figure {
                 flex: 0 1 100%;
-            }
-
-            .device-images figure {
                 width: 100%;
                 max-width: 280px;
             }
 
-            .device-images figure img {
+            .project-images figure img {
                 width: 100%;
                 max-width: 280px;
                 height: 280px;
@@ -244,7 +241,7 @@
     <!-- Project Header -->
     <div class="project-header">
         <div class="container">
-            <h1>Rouge Device Detection on Edge Monitoring System</h1>
+            <h1>Trip Planner</h1>
             <a href="index.html" class="back-link">← Back to Portfolio</a>
         </div>
     </div>
@@ -253,48 +250,43 @@
     <div class="project-content">
         <div class="container">
             <div class="project-details">
-                <h2>Devices Used</h2>
-                <div class="device-images">
-                    <figure>
-                        <img src="m5stickc.png" alt="M5StickC device">
-                        <figcaption>M5StickC device used for data collection</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="raspberry pi.png" alt="Raspberry Pi device">
-                        <figcaption>Raspberry Pi used for edge processing</figcaption>
-                    </figure>
-                </div>
                 <h2>Project Overview</h2>
                 <p>
-                    For my Full-Time Semestral Project, I developed a module and dashboard to detect and monitor rogue devices on the network. 
-                    This project enhances an existing system by building a comprehensive module that identifies unauthorized devices. 
-                    It utilizes the Django web framework to develop an asynchronous dynamic dashboard, enabling for real-time monitoring and device management. 
-                    The system is implemented by using a M5StickC device for data collection and Raspberry Pi for edge processing.
+                    A friend and I developed a mobile application that helps users plan their trips by providing information about the places they want to visit. The app enables travelers to organize their itineraries, discover points of interest, and access useful details to make trip planning easier and more enjoyable.
                 </p>
-                
-                <div class="video-demo">
-                    <h2>Video Demonstration</h2>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="fyp_viddemo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p>The video displays the dashboard operating in real-time. The user can see the list of devices and their real-time status through the dashboard.</p>
-                </div>
 
                 <h2>Project Details</h2>
                 <p>
-                    This project page is ready for you to add more information about your Rouge Device Detection on Edge Monitoring System project.
+                    Add more information about your Trip Planner project here. Describe the technologies used, the development process, and any challenges you overcame.
                 </p>
 
-                <h2>Major Deliverables</h2>
+                <h2>Key Features</h2>
                 <ul>
-                    <li>Developed a real-time dashboard to store and display information about connected clients with WebSockets.</li>
-                    <li>Developed an application to monitor clients connected to the AP.</li>
-                    <li>Learned how to use Django Web framework.</li>
-                    <li>Learned how to use Django Web framework.</li>
+                    <li>Place discovery and information lookup</li>
+                    <li>Itinerary planning and organization</li>
+                    <li>User-friendly mobile interface</li>
+                    <li>Add more features as needed</li>
                 </ul>
+
+                <h2>Screenshots</h2>
+                <div class="project-images">
+                    <figure>
+                        <img src="https://via.placeholder.com/280x280?text=Screenshot+1" alt="Trip Planner screenshot 1">
+                        <figcaption>Add your app screenshot here</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://via.placeholder.com/280x280?text=Screenshot+2" alt="Trip Planner screenshot 2">
+                        <figcaption>Add your app screenshot here</figcaption>
+                    </figure>
+                </div>
+
+                <div class="video-demo">
+                    <h2>Video Demonstration</h2>
+                    <div class="video-container">
+                        <p style="padding: 3rem; text-align: center; color: #666;">Add a demo video here when available.</p>
+                    </div>
+                    <p>Replace this section with your video and caption when you have a demo ready.</p>
+                </div>
             </div>
         </div>
     </div>

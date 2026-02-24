@@ -490,7 +490,7 @@ section {
 /* Slideshow */
 .slideshow-container {
     position: relative;
-    max-width: 400px;
+    max-width: 200px;
     margin: 0 auto 2rem;
     border-radius: 12px;
     overflow: hidden;

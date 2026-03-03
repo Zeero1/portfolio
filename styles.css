@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     color: #333;
     scroll-behavior: smooth;
+    background: #ffffff;
 }
 
 /* Navigation */
@@ -55,6 +56,31 @@ nav a:hover {
     color: #3498db;
 }
 
+.theme-toggle {
+    margin-left: 1.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: #e5e7eb;
+}
+
+.theme-toggle .theme-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
 /* Sections */
 section {
     padding: 5rem 0;
@@ -72,7 +98,8 @@ section {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url('side-shot-code-editor-using-react-js.jpg') center center / cover no-repeat;
     color: white;
     text-align: center;
 }
@@ -199,6 +226,12 @@ section {
     margin-bottom: 0.5rem;
 }
 
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
 /* Contact Section */
 #contact h2 {
     font-size: 2.5rem;
@@ -235,6 +268,13 @@ section {
 
 .contact-links a:hover {
     color: #764ba2;
+}
+
+.contact-icon {
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Animations */
@@ -616,3 +656,80 @@ section {
         font-size: 2rem;
     }
 }
+
+/* ============================================
+   Dark mode
+   ============================================ */
+
+html[data-theme="dark"] body {
+    background: #020617;
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] nav {
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.7);
+}
+
+html[data-theme="dark"] nav a {
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] nav a:hover {
+    color: #38bdf8;
+}
+
+html[data-theme="dark"] .theme-toggle {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #4b5563;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+    background: #1f2937;
+}
+
+html[data-theme="dark"] #about,
+html[data-theme="dark"] #skills,
+html[data-theme="dark"] .project-content {
+    background: #020617;
+}
+
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .skill-item,
+html[data-theme="dark"] .project-details {
+    background: #020617;
+    box-shadow: 0 0 0 1px #1f2937;
+}
+
+html[data-theme="dark"] .project-card h3,
+html[data-theme="dark"] .skill-item h3,
+html[data-theme="dark"] .project-details h2 {
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .project-card p,
+html[data-theme="dark"] #about p,
+html[data-theme="dark"] .project-details p,
+html[data-theme="dark"] .project-details li {
+    color: #9ca3af;
+}
+
+html[data-theme="dark"] .contact-info p {
+    color: #9ca3af;
+}
+
+html[data-theme="dark"] .contact-links a {
+    color: #38bdf8;
+}
+
+html[data-theme="dark"] .contact-links a:hover {
+    color: #a855f7;
+}
+
+html[data-theme="dark"] .video-demo p {
+    background: linear-gradient(135deg, #020617 0%, #020617 100%);
+    border-left-color: #38bdf8;
+    box-shadow: 0 0 0 1px #1f2937;
+}
+

@@ -148,6 +148,7 @@ section {
     width: 100%;
 }
 
+
 /* Hero Section */
 #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
@@ -390,6 +391,22 @@ section {
 .project-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+.project-header-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.onemove-logo {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 25px;
 }
 
 .project-header .project-header-links {
